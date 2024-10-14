@@ -14,18 +14,18 @@ db = [
 
 [dependencies]
 #snarkvm = { path = "../../src/snarkVM" }
-snarkvm = { git = "https://github.com/AleoNet/snarkVM.git", rev = "be171ce", features = ["test"] }
-snarkvm-algorithms = { git = "https://github.com/AleoNet/snarkVM.git", rev = "be171ce" }
-snarkvm-curves = { git = "https://github.com/AleoNet/snarkVM.git", rev = "be171ce" }
-snarkvm-utilities = { git = "https://github.com/AleoNet/snarkVM.git", rev = "be171ce" }
-snarkvm-ledger-narwhal-data = { git = "https://github.com/AleoNet/snarkVM.git", rev = "be171ce" }
-snarkvm-ledger-puzzle-epoch = { git = "https://github.com/AleoNet/snarkVM.git", rev = "be171ce" }
+snarkvm = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev", features = ["cuda"] }
+snarkvm-algorithms = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-curves = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-utilities = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-ledger-narwhal-data = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-ledger-puzzle-epoch = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
 #snarkvm = "0.9.13"
 #snarkvm-algorithms = "0.9.13"
 #snarkvm-curves = "0.9.13"
 #snarkvm-utilities = "0.9.13"
-snarkos-account = { git = "https://github.com/AleoNet/snarkOS.git", branch = "mainnet" }
-snarkos-node-router-messages = { git = "https://github.com/AleoNet/snarkOS.git", branch = "mainnet" }
+snarkos-account = { git = "https://github.com/OuIChien/snarkOS.git", branch = "OuIChien/dev" }
+snarkos-node-router-messages = { git = "https://github.com/OuIChien/snarkOS.git", branch = "OuIChien/dev" }
 tracing = "0.1.40"
 tracing-log = "0.2.0"
 futures = "0.3.30"
