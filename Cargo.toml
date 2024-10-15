@@ -24,8 +24,8 @@ snarkvm-ledger-puzzle-epoch = { git = "https://github.com/OuIChien/snarkVM.git",
 #snarkvm-algorithms = "0.9.13"
 #snarkvm-curves = "0.9.13"
 #snarkvm-utilities = "0.9.13"
-snarkos-account = { git = "https://github.com/OuIChien/snarkOS.git", branch = "OuIChien/dev" }
-snarkos-node-router-messages = { git = "https://github.com/OuIChien/snarkOS.git", branch = "OuIChien/dev" }
+snarkos-account = { git = "https://github.com/GaryO85/snarkOS.git", branch = "OuIChien/dev" }
+snarkos-node-router-messages = { git = "https://github.com/GaryO85/snarkOS.git", branch = "OuIChien/dev" }
 tracing = "0.1.40"
 tracing-log = "0.2.0"
 futures = "0.3.30"
