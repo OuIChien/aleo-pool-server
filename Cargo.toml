@@ -14,12 +14,12 @@ db = [
 
 [dependencies]
 #snarkvm = { path = "../../src/snarkVM" }
-snarkvm = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc", features = ["cuda", "cuda-mobile"] }
-snarkvm-algorithms = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
-snarkvm-curves = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
-snarkvm-utilities = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
-snarkvm-ledger-narwhal-data = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
-snarkvm-ledger-puzzle-epoch = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
+snarkvm = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev", features = ["cuda", "cuda-mobile"] }
+snarkvm-algorithms = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-curves = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-utilities = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-ledger-narwhal-data = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
+snarkvm-ledger-puzzle-epoch = { git = "https://github.com/OuIChien/snarkVM.git", branch = "OuIChien/dev" }
 #snarkvm = "0.9.13"
 #snarkvm-algorithms = "0.9.13"
 #snarkvm-curves = "0.9.13"
