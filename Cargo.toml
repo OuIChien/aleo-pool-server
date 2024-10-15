@@ -14,8 +14,8 @@ db = [
 
 [dependencies]
 #snarkvm = { path = "../../src/snarkVM" }
-snarkvm = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
-snarkvm-algorithms = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc", features = ["cuda"] }
+snarkvm = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc", features = ["cuda", "cuda-mobile"] }
+snarkvm-algorithms = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc", features = ["cuda", "cuda-mobile"] }
 snarkvm-curves = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
 snarkvm-utilities = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
 snarkvm-ledger-narwhal-data = { git = "https://github.com/OuIChien/snarkVM.git", rev="2a6e5bc" }
