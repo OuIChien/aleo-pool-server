@@ -74,12 +74,12 @@ dependencies = [
  "signal-hook-tokio",
  "snarkos-account",
  "snarkos-node-router-messages",
- "snarkvm 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-curves 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle-epoch 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
+ "snarkvm",
+ "snarkvm-algorithms",
+ "snarkvm-curves",
+ "snarkvm-ledger-narwhal-data",
+ "snarkvm-ledger-puzzle-epoch",
+ "snarkvm-utilities",
  "speedometer",
  "tokio",
  "tokio-postgres",
@@ -2850,18 +2850,18 @@ dependencies = [
 [[package]]
 name = "snarkos-account"
 version = "2.2.7"
-source = "git+https://github.com/OuIChien/snarkOS.git?branch=OuIChien/dev#1039b49083cbf941b2c467386fd0c28bb9e505b5"
+source = "git+https://github.com/GaryO85/snarkOS.git?branch=OuIChien/dev#6fb7592ea40073962e132ae4066f2033e733e92e"
 dependencies = [
  "anyhow",
  "colored",
  "rand",
- "snarkvm 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm",
 ]
 
 [[package]]
 name = "snarkos-node-bft-events"
 version = "2.2.7"
-source = "git+https://github.com/OuIChien/snarkOS.git?branch=OuIChien/dev#1039b49083cbf941b2c467386fd0c28bb9e505b5"
+source = "git+https://github.com/GaryO85/snarkOS.git?branch=OuIChien/dev#6fb7592ea40073962e132ae4066f2033e733e92e"
 dependencies = [
  "anyhow",
  "bytes",
@@ -2869,7 +2869,7 @@ dependencies = [
  "rayon",
  "serde",
  "snarkos-node-sync-locators",
- "snarkvm 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm",
  "tokio-util",
  "tracing",
 ]
@@ -2877,7 +2877,7 @@ dependencies = [
 [[package]]
 name = "snarkos-node-router-messages"
 version = "2.2.7"
-source = "git+https://github.com/OuIChien/snarkOS.git?branch=OuIChien/dev#1039b49083cbf941b2c467386fd0c28bb9e505b5"
+source = "git+https://github.com/GaryO85/snarkOS.git?branch=OuIChien/dev#6fb7592ea40073962e132ae4066f2033e733e92e"
 dependencies = [
  "anyhow",
  "bytes",
@@ -2886,7 +2886,7 @@ dependencies = [
  "serde",
  "snarkos-node-bft-events",
  "snarkos-node-sync-locators",
- "snarkvm 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm",
  "tokio",
  "tokio-util",
  "tracing",
@@ -2895,12 +2895,12 @@ dependencies = [
 [[package]]
 name = "snarkos-node-sync-locators"
 version = "2.2.7"
-source = "git+https://github.com/OuIChien/snarkOS.git?branch=OuIChien/dev#1039b49083cbf941b2c467386fd0c28bb9e505b5"
+source = "git+https://github.com/GaryO85/snarkOS.git?branch=OuIChien/dev#6fb7592ea40073962e132ae4066f2033e733e92e"
 dependencies = [
  "anyhow",
  "indexmap 2.4.0",
  "serde",
- "snarkvm 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm",
  "tracing",
 ]
 
@@ -2922,42 +2922,13 @@ dependencies = [
  "rayon",
  "self_update",
  "serde_json",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-parameters 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "thiserror",
- "ureq",
- "walkdir",
-]
-
-[[package]]
-name = "snarkvm"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "anstyle",
- "anyhow",
- "clap",
- "colored",
- "dotenvy",
- "indexmap 2.4.0",
- "num-format",
- "once_cell",
- "parking_lot",
- "rand",
- "rayon",
- "self_update",
- "serde_json",
- "snarkvm-circuit 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-parameters 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-algorithms",
+ "snarkvm-circuit",
+ "snarkvm-console",
+ "snarkvm-ledger",
+ "snarkvm-parameters",
+ "snarkvm-synthesizer",
+ "snarkvm-utilities",
  "thiserror",
  "ureq",
  "walkdir",
@@ -2987,40 +2958,10 @@ dependencies = [
  "sha2",
  "smallvec",
  "snarkvm-algorithms-cuda",
- "snarkvm-curves 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-fields 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-parameters 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "thiserror",
-]
-
-[[package]]
-name = "snarkvm-algorithms"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "blake2",
- "cfg-if",
- "fxhash",
- "hashbrown 0.14.5",
- "hex",
- "indexmap 2.4.0",
- "itertools 0.11.0",
- "num-traits",
- "parking_lot",
- "rand",
- "rand_chacha",
- "rand_core",
- "rayon",
- "serde",
- "sha2",
- "smallvec",
- "snarkvm-curves 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-fields 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-parameters 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-curves",
+ "snarkvm-fields",
+ "snarkvm-parameters",
+ "snarkvm-utilities",
  "thiserror",
 ]
 
@@ -3040,27 +2981,13 @@ name = "snarkvm-circuit"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-account 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-collections 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-account 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-collections 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-account",
+ "snarkvm-circuit-algorithms",
+ "snarkvm-circuit-collections",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-network",
+ "snarkvm-circuit-program",
+ "snarkvm-circuit-types",
 ]
 
 [[package]]
@@ -3068,21 +2995,10 @@ name = "snarkvm-circuit-account"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-account 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-account"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-account 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-algorithms",
+ "snarkvm-circuit-network",
+ "snarkvm-circuit-types",
+ "snarkvm-console-account",
 ]
 
 [[package]]
@@ -3090,19 +3006,9 @@ name = "snarkvm-circuit-algorithms"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-fields 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-algorithms"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-fields 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-types",
+ "snarkvm-console-algorithms",
+ "snarkvm-fields",
 ]
 
 [[package]]
@@ -3110,19 +3016,9 @@ name = "snarkvm-circuit-collections"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-collections"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-algorithms",
+ "snarkvm-circuit-types",
+ "snarkvm-console-collections",
 ]
 
 [[package]]
@@ -3135,30 +3031,12 @@ dependencies = [
  "nom",
  "num-traits",
  "once_cell",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-environment-witness 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-curves 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-fields 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-environment"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "indexmap 2.4.0",
- "itertools 0.11.0",
- "nom",
- "num-traits",
- "once_cell",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-environment-witness 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-curves 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-fields 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-algorithms",
+ "snarkvm-circuit-environment-witness",
+ "snarkvm-console-network",
+ "snarkvm-curves",
+ "snarkvm-fields",
+ "snarkvm-utilities",
 ]
 
 [[package]]
@@ -3167,30 +3045,14 @@ version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 
 [[package]]
-name = "snarkvm-circuit-environment-witness"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-
-[[package]]
 name = "snarkvm-circuit-network"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-collections 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-network"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-collections 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-algorithms",
+ "snarkvm-circuit-collections",
+ "snarkvm-circuit-types",
+ "snarkvm-console-network",
 ]
 
 [[package]]
@@ -3199,28 +3061,13 @@ version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
  "paste",
- "snarkvm-circuit-account 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-collections 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-program"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "paste",
- "snarkvm-circuit-account 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-collections 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-account",
+ "snarkvm-circuit-algorithms",
+ "snarkvm-circuit-collections",
+ "snarkvm-circuit-network",
+ "snarkvm-circuit-types",
+ "snarkvm-console-program",
+ "snarkvm-utilities",
 ]
 
 [[package]]
@@ -3228,29 +3075,14 @@ name = "snarkvm-circuit-types"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-address 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-group 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-integers 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-string 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-address 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-group 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-integers 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-string 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-types-address",
+ "snarkvm-circuit-types-boolean",
+ "snarkvm-circuit-types-field",
+ "snarkvm-circuit-types-group",
+ "snarkvm-circuit-types-integers",
+ "snarkvm-circuit-types-scalar",
+ "snarkvm-circuit-types-string",
 ]
 
 [[package]]
@@ -3258,25 +3090,12 @@ name = "snarkvm-circuit-types-address"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-group 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-address 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types-address"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-group 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-address 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-types-boolean",
+ "snarkvm-circuit-types-field",
+ "snarkvm-circuit-types-group",
+ "snarkvm-circuit-types-scalar",
+ "snarkvm-console-types-address",
 ]
 
 [[package]]
@@ -3284,17 +3103,8 @@ name = "snarkvm-circuit-types-boolean"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types-boolean"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-console-types-boolean",
 ]
 
 [[package]]
@@ -3302,19 +3112,9 @@ name = "snarkvm-circuit-types-field"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types-field"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-types-boolean",
+ "snarkvm-console-types-field",
 ]
 
 [[package]]
@@ -3322,23 +3122,11 @@ name = "snarkvm-circuit-types-group"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-group 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types-group"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-group 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-types-boolean",
+ "snarkvm-circuit-types-field",
+ "snarkvm-circuit-types-scalar",
+ "snarkvm-console-types-group",
 ]
 
 [[package]]
@@ -3346,23 +3134,11 @@ name = "snarkvm-circuit-types-integers"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-integers 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types-integers"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-integers 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-types-boolean",
+ "snarkvm-circuit-types-field",
+ "snarkvm-circuit-types-scalar",
+ "snarkvm-console-types-integers",
 ]
 
 [[package]]
@@ -3370,21 +3146,10 @@ name = "snarkvm-circuit-types-scalar"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types-scalar"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-types-boolean",
+ "snarkvm-circuit-types-field",
+ "snarkvm-console-types-scalar",
 ]
 
 [[package]]
@@ -3392,23 +3157,11 @@ name = "snarkvm-circuit-types-string"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit-types-integers 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-string 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-circuit-types-string"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-circuit-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit-types-integers 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-string 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit-environment",
+ "snarkvm-circuit-types-boolean",
+ "snarkvm-circuit-types-field",
+ "snarkvm-circuit-types-integers",
+ "snarkvm-console-types-string",
 ]
 
 [[package]]
@@ -3416,25 +3169,12 @@ name = "snarkvm-console"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-account 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-account 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-account",
+ "snarkvm-console-algorithms",
+ "snarkvm-console-collections",
+ "snarkvm-console-network",
+ "snarkvm-console-program",
+ "snarkvm-console-types",
 ]
 
 [[package]]
@@ -3443,19 +3183,8 @@ version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
  "bs58",
- "snarkvm-console-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "zeroize",
-]
-
-[[package]]
-name = "snarkvm-console-account"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "bs58",
- "snarkvm-console-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network",
+ "snarkvm-console-types",
  "zeroize",
 ]
 
@@ -3466,22 +3195,9 @@ source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5b
 dependencies = [
  "blake2s_simd",
  "smallvec",
- "snarkvm-console-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-fields 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "tiny-keccak",
-]
-
-[[package]]
-name = "snarkvm-console-algorithms"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "blake2s_simd",
- "smallvec",
- "snarkvm-console-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-fields 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-types",
+ "snarkvm-fields",
+ "snarkvm-utilities",
  "tiny-keccak",
 ]
 
@@ -3492,19 +3208,8 @@ source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5b
 dependencies = [
  "aleo-std",
  "rayon",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-collections"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "rayon",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-algorithms",
+ "snarkvm-console-types",
 ]
 
 [[package]]
@@ -3519,38 +3224,15 @@ dependencies = [
  "once_cell",
  "paste",
  "serde",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-curves 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-fields 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-parameters 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-network"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "anyhow",
- "indexmap 2.4.0",
- "itertools 0.11.0",
- "lazy_static",
- "once_cell",
- "paste",
- "serde",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-curves 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-fields 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-parameters 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-algorithms",
+ "snarkvm-console-algorithms",
+ "snarkvm-console-collections",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types",
+ "snarkvm-curves",
+ "snarkvm-fields",
+ "snarkvm-parameters",
+ "snarkvm-utilities",
 ]
 
 [[package]]
@@ -3565,27 +3247,9 @@ dependencies = [
  "num-traits",
  "rand",
  "serde",
- "snarkvm-curves 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-fields 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "zeroize",
-]
-
-[[package]]
-name = "snarkvm-console-network-environment"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "anyhow",
- "bech32",
- "itertools 0.11.0",
- "nom",
- "num-traits",
- "rand",
- "serde",
- "snarkvm-curves 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-fields 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-curves",
+ "snarkvm-fields",
+ "snarkvm-utilities",
  "zeroize",
 ]
 
@@ -3603,34 +3267,12 @@ dependencies = [
  "once_cell",
  "paste",
  "serde_json",
- "snarkvm-console-account 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-program"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "enum-iterator",
- "enum_index",
- "enum_index_derive",
- "indexmap 2.4.0",
- "num-derive",
- "num-traits",
- "once_cell",
- "paste",
- "serde_json",
- "snarkvm-console-account 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-collections 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-network 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-account",
+ "snarkvm-console-algorithms",
+ "snarkvm-console-collections",
+ "snarkvm-console-network",
+ "snarkvm-console-types",
+ "snarkvm-utilities",
 ]
 
 [[package]]
@@ -3638,29 +3280,14 @@ name = "snarkvm-console-types"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-address 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-group 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-integers 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-string 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-types"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-address 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-group 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-integers 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-string 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types-address",
+ "snarkvm-console-types-boolean",
+ "snarkvm-console-types-field",
+ "snarkvm-console-types-group",
+ "snarkvm-console-types-integers",
+ "snarkvm-console-types-scalar",
+ "snarkvm-console-types-string",
 ]
 
 [[package]]
@@ -3668,21 +3295,10 @@ name = "snarkvm-console-types-address"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-group 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-types-address"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-group 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types-boolean",
+ "snarkvm-console-types-field",
+ "snarkvm-console-types-group",
 ]
 
 [[package]]
@@ -3690,15 +3306,7 @@ name = "snarkvm-console-types-boolean"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-types-boolean"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
 ]
 
 [[package]]
@@ -3706,18 +3314,8 @@ name = "snarkvm-console-types-field"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "zeroize",
-]
-
-[[package]]
-name = "snarkvm-console-types-field"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types-boolean",
  "zeroize",
 ]
 
@@ -3726,21 +3324,10 @@ name = "snarkvm-console-types-group"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-types-group"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types-boolean",
+ "snarkvm-console-types-field",
+ "snarkvm-console-types-scalar",
 ]
 
 [[package]]
@@ -3748,21 +3335,10 @@ name = "snarkvm-console-types-integers"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-types-integers"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-scalar 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types-boolean",
+ "snarkvm-console-types-field",
+ "snarkvm-console-types-scalar",
 ]
 
 [[package]]
@@ -3770,20 +3346,9 @@ name = "snarkvm-console-types-scalar"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "zeroize",
-]
-
-[[package]]
-name = "snarkvm-console-types-scalar"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types-boolean",
+ "snarkvm-console-types-field",
  "zeroize",
 ]
 
@@ -3792,21 +3357,10 @@ name = "snarkvm-console-types-string"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console-types-integers 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-console-types-string"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console-network-environment 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-boolean 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-field 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console-types-integers 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console-network-environment",
+ "snarkvm-console-types-boolean",
+ "snarkvm-console-types-field",
+ "snarkvm-console-types-integers",
 ]
 
 [[package]]
@@ -3818,22 +3372,8 @@ dependencies = [
  "rayon",
  "rustc_version 0.4.0",
  "serde",
- "snarkvm-fields 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "thiserror",
-]
-
-[[package]]
-name = "snarkvm-curves"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "rand",
- "rayon",
- "rustc_version 0.4.0",
- "serde",
- "snarkvm-fields 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-fields",
+ "snarkvm-utilities",
  "thiserror",
 ]
 
@@ -3849,24 +3389,7 @@ dependencies = [
  "rand",
  "rayon",
  "serde",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "thiserror",
- "zeroize",
-]
-
-[[package]]
-name = "snarkvm-fields"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "itertools 0.11.0",
- "num-traits",
- "rand",
- "rayon",
- "serde",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-utilities",
  "thiserror",
  "zeroize",
 ]
@@ -3882,39 +3405,15 @@ dependencies = [
  "parking_lot",
  "rand",
  "rayon",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-authority 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-query 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "time",
- "tracing",
-]
-
-[[package]]
-name = "snarkvm-ledger"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "indexmap 2.4.0",
- "parking_lot",
- "rand",
- "rayon",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-authority 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-query 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-authority",
+ "snarkvm-ledger-block",
+ "snarkvm-ledger-committee",
+ "snarkvm-ledger-narwhal",
+ "snarkvm-ledger-puzzle",
+ "snarkvm-ledger-query",
+ "snarkvm-ledger-store",
+ "snarkvm-synthesizer",
  "time",
  "tracing",
 ]
@@ -3927,20 +3426,8 @@ dependencies = [
  "anyhow",
  "rand",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-subdag 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-authority"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "anyhow",
- "rand",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-subdag 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-narwhal-subdag",
 ]
 
 [[package]]
@@ -3951,36 +3438,16 @@ dependencies = [
  "indexmap 2.4.0",
  "rayon",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-authority 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-subdag 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-block"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "indexmap 2.4.0",
- "rayon",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-authority 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-subdag 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-authority",
+ "snarkvm-ledger-committee",
+ "snarkvm-ledger-narwhal-batch-header",
+ "snarkvm-ledger-narwhal-data",
+ "snarkvm-ledger-narwhal-subdag",
+ "snarkvm-ledger-narwhal-transmission-id",
+ "snarkvm-ledger-puzzle",
+ "snarkvm-synthesizer-program",
+ "snarkvm-synthesizer-snark",
 ]
 
 [[package]]
@@ -3991,20 +3458,8 @@ dependencies = [
  "indexmap 2.4.0",
  "rayon",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-committee"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "indexmap 2.4.0",
- "rayon",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-narwhal-batch-header",
 ]
 
 [[package]]
@@ -4012,25 +3467,12 @@ name = "snarkvm-ledger-narwhal"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-ledger-narwhal-batch-certificate 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-subdag 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-transmission 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-narwhal"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-ledger-narwhal-batch-certificate 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-subdag 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-transmission 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-ledger-narwhal-batch-certificate",
+ "snarkvm-ledger-narwhal-batch-header",
+ "snarkvm-ledger-narwhal-data",
+ "snarkvm-ledger-narwhal-subdag",
+ "snarkvm-ledger-narwhal-transmission",
+ "snarkvm-ledger-narwhal-transmission-id",
 ]
 
 [[package]]
@@ -4041,22 +3483,9 @@ dependencies = [
  "indexmap 2.4.0",
  "rayon",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-narwhal-batch-certificate"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "indexmap 2.4.0",
- "rayon",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-narwhal-batch-header",
+ "snarkvm-ledger-narwhal-transmission-id",
 ]
 
 [[package]]
@@ -4067,20 +3496,8 @@ dependencies = [
  "indexmap 2.4.0",
  "rayon",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-narwhal-batch-header"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "indexmap 2.4.0",
- "rayon",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-narwhal-transmission-id",
 ]
 
 [[package]]
@@ -4090,18 +3507,7 @@ source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5b
 dependencies = [
  "bytes",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "tokio",
-]
-
-[[package]]
-name = "snarkvm-ledger-narwhal-data"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "bytes",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
  "tokio",
 ]
 
@@ -4113,26 +3519,11 @@ dependencies = [
  "indexmap 2.4.0",
  "rayon",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-batch-certificate 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-narwhal-subdag"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "indexmap 2.4.0",
- "rayon",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-batch-certificate 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-batch-header 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-transmission-id 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-committee",
+ "snarkvm-ledger-narwhal-batch-certificate",
+ "snarkvm-ledger-narwhal-batch-header",
+ "snarkvm-ledger-narwhal-transmission-id",
 ]
 
 [[package]]
@@ -4142,23 +3533,10 @@ source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5b
 dependencies = [
  "bytes",
  "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-narwhal-transmission"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "bytes",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-block",
+ "snarkvm-ledger-narwhal-data",
+ "snarkvm-ledger-puzzle",
 ]
 
 [[package]]
@@ -4166,17 +3544,8 @@ name = "snarkvm-ledger-narwhal-transmission-id"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
 dependencies = [
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-narwhal-transmission-id"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-puzzle",
 ]
 
 [[package]]
@@ -4195,28 +3564,8 @@ dependencies = [
  "rand_chacha",
  "rayon",
  "serde_json",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-puzzle"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "bincode",
- "indexmap 2.4.0",
- "lru",
- "once_cell",
- "parking_lot",
- "rand",
- "rand_chacha",
- "rayon",
- "serde_json",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-algorithms",
+ "snarkvm-console",
 ]
 
 [[package]]
@@ -4233,32 +3582,11 @@ dependencies = [
  "rand",
  "rand_chacha",
  "rayon",
- "snarkvm-circuit 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-process 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-puzzle-epoch"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "colored",
- "indexmap 2.4.0",
- "lru",
- "parking_lot",
- "rand",
- "rand_chacha",
- "rayon",
- "snarkvm-circuit 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-process 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit",
+ "snarkvm-console",
+ "snarkvm-ledger-puzzle",
+ "snarkvm-synthesizer-process",
+ "snarkvm-synthesizer-program",
 ]
 
 [[package]]
@@ -4268,22 +3596,9 @@ source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5b
 dependencies = [
  "async-trait",
  "reqwest 0.11.27",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "ureq",
-]
-
-[[package]]
-name = "snarkvm-ledger-query"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "async-trait",
- "reqwest 0.11.27",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-store",
+ "snarkvm-synthesizer-program",
  "ureq",
 ]
 
@@ -4291,29 +3606,6 @@ dependencies = [
 name = "snarkvm-ledger-store"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
-dependencies = [
- "aleo-std-storage",
- "anyhow",
- "bincode",
- "indexmap 2.4.0",
- "parking_lot",
- "rayon",
- "serde",
- "serde_json",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-authority 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-batch-certificate 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-ledger-store"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
 dependencies = [
  "aleo-std-storage",
  "anyhow",
@@ -4326,14 +3618,14 @@ dependencies = [
  "serde",
  "serde_json",
  "smallvec",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-authority 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-batch-certificate 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-console",
+ "snarkvm-ledger-authority",
+ "snarkvm-ledger-block",
+ "snarkvm-ledger-committee",
+ "snarkvm-ledger-narwhal-batch-certificate",
+ "snarkvm-ledger-puzzle",
+ "snarkvm-synthesizer-program",
+ "snarkvm-synthesizer-snark",
  "tracing",
 ]
 
@@ -4357,33 +3649,8 @@ dependencies = [
  "rand",
  "serde_json",
  "sha2",
- "snarkvm-curves 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "thiserror",
-]
-
-[[package]]
-name = "snarkvm-parameters"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "bincode",
- "cfg-if",
- "colored",
- "curl",
- "hex",
- "indexmap 2.4.0",
- "itertools 0.11.0",
- "lazy_static",
- "parking_lot",
- "paste",
- "rand",
- "serde_json",
- "sha2",
- "snarkvm-curves 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-curves",
+ "snarkvm-utilities",
  "thiserror",
 ]
 
@@ -4401,51 +3668,20 @@ dependencies = [
  "rand",
  "rayon",
  "serde_json",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-puzzle-epoch 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-query 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-process 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "tracing",
-]
-
-[[package]]
-name = "snarkvm-synthesizer"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "indexmap 2.4.0",
- "itertools 0.11.0",
- "lru",
- "parking_lot",
- "rand",
- "rayon",
- "serde_json",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-committee 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-narwhal-data 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-puzzle-epoch 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-query 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-process 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-algorithms",
+ "snarkvm-circuit",
+ "snarkvm-console",
+ "snarkvm-ledger-block",
+ "snarkvm-ledger-committee",
+ "snarkvm-ledger-narwhal-data",
+ "snarkvm-ledger-puzzle",
+ "snarkvm-ledger-puzzle-epoch",
+ "snarkvm-ledger-query",
+ "snarkvm-ledger-store",
+ "snarkvm-synthesizer-process",
+ "snarkvm-synthesizer-program",
+ "snarkvm-synthesizer-snark",
+ "snarkvm-utilities",
  "tracing",
 ]
 
@@ -4463,38 +3699,14 @@ dependencies = [
  "rand_chacha",
  "rayon",
  "serde_json",
- "snarkvm-circuit 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-query 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-synthesizer-process"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "colored",
- "indexmap 2.4.0",
- "once_cell",
- "parking_lot",
- "rand",
- "rand_chacha",
- "rayon",
- "serde_json",
- "snarkvm-circuit 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-block 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-query 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-ledger-store 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-program 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-synthesizer-snark 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-utilities 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit",
+ "snarkvm-console",
+ "snarkvm-ledger-block",
+ "snarkvm-ledger-query",
+ "snarkvm-ledger-store",
+ "snarkvm-synthesizer-program",
+ "snarkvm-synthesizer-snark",
+ "snarkvm-utilities",
 ]
 
 [[package]]
@@ -4507,22 +3719,8 @@ dependencies = [
  "rand",
  "rand_chacha",
  "serde_json",
- "snarkvm-circuit 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-synthesizer-program"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "indexmap 2.4.0",
- "paste",
- "rand",
- "rand_chacha",
- "serde_json",
- "snarkvm-circuit 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-circuit",
+ "snarkvm-console",
 ]
 
 [[package]]
@@ -4533,22 +3731,9 @@ dependencies = [
  "bincode",
  "once_cell",
  "serde_json",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-circuit 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "snarkvm-console 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
-]
-
-[[package]]
-name = "snarkvm-synthesizer-snark"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "bincode",
- "once_cell",
- "serde_json",
- "snarkvm-algorithms 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-circuit 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
- "snarkvm-console 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-algorithms",
+ "snarkvm-circuit",
+ "snarkvm-console",
 ]
 
 [[package]]
@@ -4567,28 +3752,7 @@ dependencies = [
  "serde",
  "serde_json",
  "smol_str",
- "snarkvm-utilities-derives 0.16.19 (git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev)",
- "thiserror",
- "zeroize",
-]
-
-[[package]]
-name = "snarkvm-utilities"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
-dependencies = [
- "aleo-std",
- "anyhow",
- "bincode",
- "num-bigint",
- "num_cpus",
- "rand",
- "rand_xorshift",
- "rayon",
- "serde",
- "serde_json",
- "smol_str",
- "snarkvm-utilities-derives 0.16.19 (git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0)",
+ "snarkvm-utilities-derives",
  "thiserror",
  "zeroize",
 ]
@@ -4597,16 +3761,6 @@ dependencies = [
 name = "snarkvm-utilities-derives"
 version = "0.16.19"
 source = "git+https://github.com/OuIChien/snarkVM.git?branch=OuIChien/dev#2a6e5bcb15e9b7d4820a5c706944b2fdd25a2f22"
-dependencies = [
- "proc-macro2",
- "quote 1.0.37",
- "syn 2.0.76",
-]
-
-[[package]]
-name = "snarkvm-utilities-derives"
-version = "0.16.19"
-source = "git+https://github.com/AleoNet/snarkVM.git?rev=3d42aa0#3d42aa04a058cd5f46a1880b421313e1c04a63dc"
 dependencies = [
  "proc-macro2",
  "quote 1.0.37",
